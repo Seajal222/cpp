@@ -5,9 +5,9 @@ using namespace std;
 
 class ArraySum {
 private:
-    int* arr; // Pointer to the array
-    int size; // Size of the array
-    int sum;  // Sum of positive numbers
+    int* arr; 
+    int size;
+    int sum; 
 
 public:
     // Parameterized constructor
@@ -36,24 +36,21 @@ public:
         delete[] arr;
     }
 
-    // Function to display the sum
     void displaySum() const {
         cout << "Sum of all positive numbers: " << sum << endl;
     }
 };
 
 int main() {
-    // Sample array
     int numbers[] = {-1, 2, 3, -4, 5, 6};
     int size = sizeof(numbers) / sizeof(numbers[0]);
 
-    // Create an object of ArraySum
+
     ArraySum arraySum(numbers, size);
 
-    // Use the copy constructor
+
     ArraySum copiedArraySum = arraySum;
 
-    // Display the sum of positive numbers
     copiedArraySum.displaySum();
 
     return 0;
